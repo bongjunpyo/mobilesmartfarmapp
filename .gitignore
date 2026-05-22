@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Model weights (too large for git)
+ai/models/*.pt
+ai/models/*.pth
+*.pt
+*.pth
+runs/
+yolo_dataset/
+
+# Dataset cache
+.cache/
+dataset_metadata.json
+
+# Output images
+*.png
+*.jpg
+!docs/**/*.png
+!docs/**/*.jpg
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android build
+android/*/build/
+android/*/.gradle/
+android/*/local.properties
+*.keystore
+!debug.keystore
+
+# Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+node_modules/
