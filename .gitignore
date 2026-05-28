@@ -23,6 +23,8 @@ dataset_metadata.json
 *.jpg
 !docs/**/*.png
 !docs/**/*.jpg
+!ai/test_images/**/*.jpg
+!ai/test_images/**/*.JPG
 
 # macOS
 .DS_Store
