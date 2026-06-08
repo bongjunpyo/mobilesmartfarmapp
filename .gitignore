@@ -25,6 +25,16 @@ dataset_metadata.json
 !docs/**/*.jpg
 !ai/test_images/**/*.jpg
 !ai/test_images/**/*.JPG
+!report_assets/**/*.png
+!report_assets/**/*.jpg
+
+# 보고서 중간 산출물 (대용량 추론 갤러리는 제외)
+report_assets/inference_gallery.png
+report_assets/legacy_docx_img/
+
+# 보고서/발표 바이너리 (대용량, 스크립트로 재생성 가능)
+*.docx
+*.pptx
 
 # macOS
 .DS_Store
