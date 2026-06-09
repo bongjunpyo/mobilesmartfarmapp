@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.SmartFarm" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_dark</item>
+        <item name="colorPrimaryVariant">@color/green_mid</item>
+        <item name="colorSecondary">@color/green_accent</item>
+        <item name="android:statusBarColor">#388E3C</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+    <style name="Theme.SmartFarm" parent="Base.Theme.SmartFarm" />
+
+    <!-- 스플래시 전용 테마 -->
+    <style name="Theme.SmartFarm.Splash" parent="Theme.SmartFarm">
+        <item name="android:windowBackground">@color/green_dark</item>
+        <item name="android:statusBarColor">@color/green_dark</item>
+        <item name="android:navigationBarColor">@color/green_dark</item>
+    </style>
+</resources>
