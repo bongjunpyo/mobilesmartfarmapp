@@ -1,3 +1,6 @@
+# Combined .gitignore
+
+# Android
 *.iml
 .gradle
 /local.properties
@@ -13,3 +16,62 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Model weights (too large for git)
+ai/models/*.pt
+ai/models/*.pth
+*.pt
+*.pth
+runs/
+yolo_dataset/
+
+# Dataset cache
+.cache/
+dataset_metadata.json
+
+# Output images
+*.png
+*.jpg
+!docs/**/*.png
+!docs/**/*.jpg
+!ai/test_images/**/*.jpg
+!ai/test_images/**/*.JPG
+!report_assets/**/*.png
+!report_assets/**/*.jpg
+
+# 보고서 중간 산출물 (대용량 추론 갤러리는 제외)
+report_assets/inference_gallery.png
+report_assets/legacy_docx_img/
+
+# 보고서/발표 바이너리 (대용량, 스크립트로 재생성 가능)
+*.docx
+*.pptx
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android build
+android/*/build/
+android/*/.gradle/
+android/*/local.properties
+*.keystore
+!debug.keystore
+
+# Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+node_modules/
