@@ -68,7 +68,7 @@ ai/
 │   ├── yolo_crop_visualization.py    # YOLO 타일 시각화 (실험)
 │   ├── yolo_crop_efficientnet_accuracy.py  # EfficientNet-B3 학습
 │   └── disease_region_test.py        # GradCAM 검증
-└── test_images/                      # 테스트용 이미지 33장
+└── test_images/                      # 테스트용 이미지 53장
     ├── AppleCedarRust1~4.JPG
     ├── AppleScab1~3.JPG
     ├── CornCommonRust1~3.JPG

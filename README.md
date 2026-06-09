@@ -23,6 +23,8 @@
 
 ## 시스템 아키텍처
 
+> 데이터 흐름·계층별 책임 상세: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+
 ```
 ┌──────────────────┐      multipart      ┌─────────────────────┐      ONNX      ┌──────────────────┐
 │  Android 앱      │   ───────────────▶ │  FastAPI 백엔드      │ ──────────────▶ │ EfficientNet-B3  │
@@ -44,17 +46,19 @@
 ## 프로젝트 구조
 
 ```
-smartfarm-upgrade/
+mobilesmartfarmapp/
 ├── ai/                                # AI 모듈 (Python)
 │   ├── README.md                      # 전체 파이프라인 문서
 │   ├── model/best_crop_model.onnx     # 학습된 모델 (~41 MB)
 │   ├── preprocessing/                 # HSV 전처리, 학습, GradCAM 5종 스크립트
-│   └── test_images/                   # 검증용 식물 잎 이미지 33장
+│   └── test_images/                   # 검증용 식물 잎 이미지 53장
 ├── android/                           # Android 통합 코드
 │   ├── README.md                      # 통합 방법
 │   └── PlantDiseaseClassifier.java    # 추론 클래스 (단일/그리드)
 ├── backend/                           # FastAPI 백엔드 (별도 디렉토리에서 운영)
 │   └── README.md                      # API 스펙 + DB 스키마
+├── docs/
+│   └── ARCHITECTURE.md                # 시스템 아키텍처 · 데이터 흐름
 ├── report_assets/                     # 발표/보고서 자료 생성 스크립트
 │   ├── _gen_inference.py              # ONNX 추론 갤러리·그리드 시각화 생성
 │   ├── _gen_diagrams.py               # 학습 곡선·아키텍처·데이터 파이프라인
