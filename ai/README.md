@@ -1,7 +1,7 @@
 # AI 모듈
 
 > 스마트팜 질병 감지 시스템 — 작물 질병 분류 AI  
-> 작성자: 봉준표 | 최종 수정: 2026-05-29
+> 작성자: 봉준표 | 최종 수정: 2026-06-17
 
 ---
 
@@ -68,7 +68,7 @@ ai/
 │   ├── yolo_crop_visualization.py    # YOLO 타일 시각화 (실험)
 │   ├── yolo_crop_efficientnet_accuracy.py  # EfficientNet-B3 학습
 │   └── disease_region_test.py        # GradCAM 검증
-└── test_images/                      # 테스트용 이미지 53장
+└── test_images/                      # 테스트용 이미지 53장 (단일 잎 33 + 광각 wide/ 20)
     ├── AppleCedarRust1~4.JPG
     ├── AppleScab1~3.JPG
     ├── CornCommonRust1~3.JPG
@@ -77,7 +77,7 @@ ai/
     ├── TomatoEarlyBlight1~6.JPG
     ├── TomatoHealthy1~4.JPG
     ├── TomatoYellowCurlVirus1~6.JPG
-    └── wide/
+    └── wide/                         # 광각 scene 20장 (predictGrid 검증용)
 ```
 
 ---
@@ -317,6 +317,9 @@ torch.onnx.export(model, dummy, "model/best_crop_model.onnx",
 
 ## 9. Android 연동
 
+> 최종 앱은 **서버사이드 추론**(이미지를 백엔드 `/analyze` 로 전송 → 서버가 ONNX 추론)을 기본 경로로 쓴다.  
+> 아래는 서버 없이 단말에서 바로 추론하는 **대체(온디바이스)** 경로 문서다.
+>
 > 파일: `../android/PlantDiseaseClassifier.java`  
 > 모델: `model/best_crop_model.onnx` → `app/src/main/assets/`
 
