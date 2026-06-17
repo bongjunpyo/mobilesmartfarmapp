@@ -8,7 +8,7 @@
 |------|--------|------|
 | `_gen_diagrams.py` | `architecture.png`, `training_curve.png`, `data_pipeline.png` | 시스템 아키텍처·학습 곡선·데이터 파이프라인 도식 |
 | `_gen_inference.py` | `inference_gallery.png`, `grid_overlay.png` | ONNX 모델로 test_images 추론 → 진단 갤러리·그리드 오버레이 |
-| `_gen_ui_mockup.py` | `ui_*.png`, `ui_combined.png` | 앱 화면 와이어프레임 목업 (앱 미구현, 발표용) |
+| `_gen_ui_mockup.py` | `ui_*.png`, `ui_combined.png` | 앱 화면 와이어프레임 목업 (발표 자료용) |
 | `_gen_docx.py` | `../스마트팜_AI_병해진단_최종보고서.docx` | AI 중심 최종보고서 |
 | `_gen_pptx.py` | `../모바일프로그래밍_최종발표.pptx` | 16:9 최종 발표 슬라이드 |
 
