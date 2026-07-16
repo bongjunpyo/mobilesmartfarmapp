@@ -46,6 +46,7 @@ dataset_metadata.json
 !ai/test_images/**/*.JPG
 !report_assets/**/*.png
 !report_assets/**/*.jpg
+!ai/analysis/**/*.png
 
 # 보고서 중간 산출물 (대용량 추론 갤러리는 제외)
 report_assets/inference_gallery.png
