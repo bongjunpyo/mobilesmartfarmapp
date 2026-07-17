@@ -280,6 +280,22 @@ python preprocessing/disease_region_test.py
 | 모델 파일 | `best_crop_model.pth` |
 | ONNX 변환 | `model/best_crop_model.onnx` (~41 MB) |
 
+### 클래스별 성능 (test_images 실측)
+
+`analysis/confusion_analysis.py`로 `test_images/` 라벨 33장을 ONNX CPU 추론한 결과.
+Val Accuracy 95.30% 대비 test 정확도는 **23/33 = 69.7%** — 검증셋(70×70 크롭)과
+원본 잎 이미지의 분포 차이가 드러난다.
+
+| 클래스 | recall | 관찰 |
+|------|--------|------|
+| Cedar apple rust / Corn Common Rust / Potato Healthy / Tomato YLCV | 1.00 | 안정 |
+| Tomato Healthy | 0.75 | 1장 Apple healthy 혼동 |
+| Tomato Early Blight | 0.50 | Bacterial spot·mosaic virus 혼동 |
+| Apple Scab | 0.33 | Cedar rust·healthy 혼동 |
+| **Potato Early Blight** | **0.20** | 4장이 Pepper/Apple 계열로 붕괴 (최다 오분류) |
+
+원인 가설과 개선 방향은 [`analysis/README.md`](analysis/README.md) 참조.
+
 **ONNX 변환 명령 (참고)**
 
 ```python
